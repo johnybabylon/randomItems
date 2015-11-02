@@ -56,39 +56,15 @@
     
 }
 
-- (void)setItemName:(NSString *)str
+- (void)setContainedItem:(BNRItem *)containedItem
 {
-    _itemName = str;
-}
-- (NSString *)itemName
-{
-    return _itemName;
+    _containedItem = containedItem;
+    self.containedItem.container = self;
 }
 
-- (void)setSerialNumber:(NSString *)str
-{
-    _serialNumber = str;
-}
 
-- (NSString *)serialNumber
-{
-    return _serialNumber;
-}
 
-- (void)setValueInDollars:(int)v
-{
-    _valueInDollars = v;
-}
 
-- (int)valueInDollars
-{
-    return _valueInDollars;
-}
-
-- (NSDate *)dateCreated
-{
-    return _dateCreated;
-}
 
 + (instancetype)randomItem
 {
